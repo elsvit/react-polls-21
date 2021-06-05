@@ -1,0 +1,50 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.select-choice-wrapper {
+  padding: 16px;
+  position: relative;
+
+  .select-choice-table-header {
+    border-bottom: solid 1px $grayLight;
+    padding: 0 8px 8px;
+    font-size: 20px;
+    font-weight: 600;
+    color: $darkGray;
+  }
+  .select-choice-table {
+    overflow: auto;
+    margin-bottom: 16px;
+
+    .select-choice-row:nth-child(2n) {
+      background: #eee;
+    }
+  }
+
+  .select-choice-row {
+    display: flex;
+    align-items: center;
+    border: 1px solid #eee;
+    padding: 0 8px;
+    color: $darkGray;
+    font-size: 20px;
+    overflow-x: scroll;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 4px 1px 8px rgba(100, 100, 100, .3);
+      -webkit-box-shadow: 4px 1px 8px rgba(100, 100, 100, .3);
+    }
+  }
+  .select-choice-btns {
+    margin-top: 16px;
+  }
+  .divider {
+    width: 100%;
+    margin: 16px 0 !important;
+  }
+
+  .form-btn {
+    margin-right: 16px;
+  }
+}

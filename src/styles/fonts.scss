@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url('../assets/fonts/CenturyGothic.eot') format('eot'),
+  url('../assets/fonts/CenturyGothic.ttf') format('ttf'),
+  url('../assets/fonts/CenturyGothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CenturyGothic-Bold';
+  src: url('../assets/fonts/CenturyGothic-Bold.eot') format('eot'),
+  url('../assets/fonts/CenturyGothic-Bold.ttf') format('ttf'),
+  url('../assets/fonts/CenturyGothic-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CenturyGothic-BoldItalic';
+  src: url('../assets/fonts/CenturyGothic-BoldItalic.eot') format('eot'),
+  url('../assets/fonts/CenturyGothic-BoldItalic.ttf') format('ttf'),
+  url('../assets/fonts/CenturyGothic-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+.fs {
+  &-9 {font-size: 9px !important;}
+  &-10 {font-size: 10px !important;}
+  &-11 {font-size: 11px !important;}
+  &-12 {font-size: 12px !important;}
+
+  &-13 {
+    font-size: 13px !important;
+  }
+  &-14 {font-size: 14px !important;}
+  &-16 {font-size: 16px !important;}
+  &-18 {font-size: 18px !important;}
+  &-20 {font-size: 20px !important;}
+
+  &-24 {
+    font-size: 24px !important;
+  }
+}

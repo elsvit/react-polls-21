@@ -1,0 +1,131 @@
+/*
+ * Copyright 2021 Elsvit. Confidential and Proprietary. All Rights Reserved.
+ */
+ {
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 10,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "commonjs": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "plugins": [
+    "jsx-a11y",
+    "lodash",
+    "notice",
+    "react",
+    "react-native",
+    "@typescript-eslint",
+    "import"
+  ],
+  "rules" : {
+    "no-console": 0,
+    "jsx-a11y/no-onchange": 0,
+
+    "curly": 2,
+    "default-case": 2,
+    "eqeqeq": 2,
+    "no-alert": 2,
+    "no-else-return": 2,
+    "no-multi-spaces": 2,
+    "@typescript-eslint/no-unused-vars":["error", { "varsIgnorePattern": "[iI]gnored" }],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "yoda": 2,
+
+    "array-bracket-newline": [0, { "": null }],
+    "array-bracket-spacing": 0,
+    "block-spacing": 2,
+    "brace-style": 2,
+    "comma-dangle": [2, {
+      "arrays": "never",
+      "objects": "never",
+      "imports": "never",
+      "exports": "never",
+      "functions": "ignore"
+    }],
+    "comma-spacing": [2, { "before": false, "after": true }],
+    "comma-style": [2, "last"],
+    "computed-property-spacing": [2, "never"],
+    "eol-last": [2, "never"],
+    "func-call-spacing": [2, "never"],
+    "func-names": [2, "never"],
+    "key-spacing": [2, {"beforeColon": false}],
+    "keyword-spacing": 2,
+    "new-parens": 2,
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "no-trailing-spaces": 2,
+    "object-curly-newline": [2, { "multiline": true }],
+    "object-curly-spacing": [2, "never"],
+    "object-property-newline": 2,
+    "padded-blocks": ["error", "never"],
+    "padding-line-between-statements": [2,
+      { "blankLine": "always", "prev": "*", "next": "return" },
+      { "blankLine": "always", "prev": "*", "next": "if" },
+      { "blankLine": "always", "prev": "*", "next": "throw" },
+      { "blankLine": "always", "prev": "function", "next": ["function", "block-like", "multiline-block-like"] },
+      { "blankLine": "always", "prev": "class", "next": "*" },
+      { "blankLine": "never", "prev": ["const", "let"], "next": ["const", "let"] },
+      { "blankLine": "always", "prev": "block-like", "next": "*" },
+      { "blankLine": "always", "prev": "block", "next": "*" },
+      { "blankLine": "always", "prev": "multiline-block-like", "next": "*" },
+      { "blankLine": "always", "prev": "expression", "next": "*" },
+      { "blankLine": "any", "prev": ["import", "cjs-import"], "next": "*"},
+      { "blankLine": "any", "prev": "expression", "next": "expression" }
+    ],
+    "prefer-arrow-callback": [ 2, { "allowNamedFunctions": false, "allowUnboundThis": false } ],
+    "arrow-spacing": ["error", { "before": true, "after": true }],
+    "quote-props": ["error", "as-needed"],
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    "semi": [2, "always"],
+    "spaced-comment": [2, "always"],
+    "space-before-function-paren": ["error", "never"],
+    "space-infix-ops": ["error", {"int32Hint": false}],
+    "space-in-parens": ["error", "never"],
+    "newline-after-var": ["error", "always"],
+    "import/newline-after-import": ["error", { "count": 1 }],
+    "@typescript-eslint/no-unused-expressions": ["error"],
+
+    // React Native
+    "react-native/no-unused-styles": 2,
+    "react-native/split-platform-components": 2,
+    "react-native/no-inline-styles": 2,
+    "react-native/no-color-literals": 2,
+    "react-native/no-raw-text": 0,
+
+    // Rules specific to this module
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "jsx-quotes": [2, "prefer-double"],
+    "no-tabs": 2,
+    "react/jsx-curly-spacing": [2, {"when": "never"}],
+    "react/react-in-jsx-scope": 0,
+    "react/destructuring-assignment": [2, "always", { "ignoreClassFields": true }]
+  },
+  "settings": {
+    "react": {
+      "createClass": "createReactClass", // Regex for Component Factory to use,
+                                         // default to "createReactClass"
+      "pragma": "React",  // Pragma to use, default to "React"
+      "version": "17.0" // React version. "detect" automatically picks the version you have installed.
+                           // You can also use `16.0`, `16.3`, etc, if you want to override the detected value.
+    },
+    "propWrapperFunctions": [
+        // The names of any function used to wrap propTypes, e.g. `forbidExtraProps`. If this isn't set, any propTypes wrapped in a function will be skipped.
+        "forbidExtraProps",
+        {"property": "freeze", "object": "Object"}
+    ]
+  }
+}

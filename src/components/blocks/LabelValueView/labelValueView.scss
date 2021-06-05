@@ -1,0 +1,27 @@
+@import 'src/styles/variables';
+
+.label-value {
+  padding: 0 16px 8px;
+
+  .label-value-label {
+    height: 24px;
+    color: $gray;
+    font-size: 16px;
+    overflow: hidden;
+  }
+  .label-value-text {
+    max-height: 86px;
+    color: $darkGray;
+    font-size: 20px;
+    font-weight: 500;
+    overflow: auto;
+  }
+  .label-value-image {
+    width: 86px;
+    height: 86px;
+    background-position: center center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

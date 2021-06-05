@@ -1,0 +1,46 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.form-wrapper {
+  display: flex;
+  position: relative;
+  padding: 16px;
+  flex-direction: column;
+  background: $white;
+
+  .form {
+    flex-direction: column;
+    max-width: $maxFormFieldWidth;
+    margin-top: 16px;
+
+    .form-field {
+      width: 100%;
+      max-width: $maxFormFieldWidth;
+      margin-top: 12px;
+    }
+    .field-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .field-btn {
+      align-self: flex-end;
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      background: #eeeeee;
+      text-align: center;
+      margin: 4px
+    }
+    .form-btn-wrapper {
+      width: 100%;
+      margin-top: 16px;
+    }
+    .form-btn {
+      margin: 4px;
+    }
+  }
+  .under-form-section {
+    margin-top: 24px;
+  }
+}

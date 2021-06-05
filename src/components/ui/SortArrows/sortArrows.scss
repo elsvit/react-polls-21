@@ -1,0 +1,17 @@
+@import 'src/styles/variables';
+
+$arrowHeight: 40px;
+
+.sort-arrows {
+  display: flex;
+  flex-flow: row;
+  width: 2 * $arrowHeight + 2px;
+  height: $arrowHeight;
+
+  .sort-arrow {
+    flex: 1;
+    width: $arrowHeight;
+    height: $arrowHeight;
+    cursor: pointer;
+  }
+}

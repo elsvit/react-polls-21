@@ -1,0 +1,61 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.drawer-wrapper {
+  display: flex;
+  padding-top: $drawerHeaderHeight;
+  height: 100%;
+
+  .drawer-app-bar {
+    z-index: 5;
+    transition: 0.2s;
+    height: $drawerHeaderHeight;
+  }
+  .drawer-app-bar-shift {
+    margin-left: $drawerOpenWidth;
+    width: calc(100% - 160px);
+    width: -moz-calc(100% - 160px);
+    width: -webkit-calc(100% - 160px);
+    transition: 0.2s;
+  }
+  .drawer-menu-button {
+    margin-left: 12px;
+  }
+  .hide {
+   display: none;
+  }
+  .drawer {
+    width: $drawerCloseWidth;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .drawer-open {
+    width: $drawerOpenWidth;
+    transition: 0.2s;
+  }
+  .drawer-close {
+    width: $drawerCloseWidth;
+    transition: 0.2s;
+    overflow-x: hidden;
+  }
+  .drawer-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: $drawerHeaderHeight;
+    padding: 0 8px;
+  }
+  .drawer-title {
+    padding-left: 16px;
+    color: $white;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: $drawerHeaderHeight;
+  }
+  .drawer-item-label {
+    color: $darkGray;
+  }
+  .drawer-content {
+    flex-grow: 1;
+  }
+}
