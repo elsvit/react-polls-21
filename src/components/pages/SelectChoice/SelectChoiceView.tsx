@@ -14,7 +14,6 @@ interface IQuestionViewProps {
   onClick: (val: string) => void;
   onSubmit: () => void;
   onCancel: () => void;
-  // isLoading: boolean;
 }
 
 const SelectChoiceView = ({item, selectedUrl, totalVotes, onClick, onSubmit, onCancel}: IQuestionViewProps

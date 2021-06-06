@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Router should render without error 1`] = `
+<Memo(Connect(ConnectedRouterWithContext))
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <DrawerWrapper>
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/questions/:id"
+      />
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "type": [Function],
+          }
+        }
+        exact={true}
+        path="/questions"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/add"
+      />
+      <Redirect
+        to="/questions"
+      />
+    </Switch>
+  </DrawerWrapper>
+  <NotificationContainer
+    enterTimeout={400}
+    leaveTimeout={400}
+  />
+</Memo(Connect(ConnectedRouterWithContext))>
+`;

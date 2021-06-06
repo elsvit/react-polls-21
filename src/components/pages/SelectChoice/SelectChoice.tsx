@@ -59,7 +59,6 @@ const SelectChoice = ({current, match, navTo, getQuestion, saveVote}: ISelectCho
     }
   };
 
-  // const isLoading = !!loading[QuestionsActions.GET_QUESTION];
   const totalVotes = current?.choices?.reduce((a, b) => a + b.votes, 0) || 0 ;
 
   return (
@@ -71,7 +70,6 @@ const SelectChoice = ({current, match, navTo, getQuestion, saveVote}: ISelectCho
         onClick={onClick}
         onSubmit={onSubmit}
         onCancel={onCancel}
-        // isLoading={isLoading}
       />
     </Fragment>
   );

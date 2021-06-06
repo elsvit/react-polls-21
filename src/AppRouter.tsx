@@ -3,26 +3,18 @@
  */
 
 import {ConnectedRouter} from 'connected-react-router';
-import {History} from 'history';
 import * as React from 'react';
-import {Redirect, Route, RouteProps, Switch} from 'react-router-dom';
+import {Redirect, Route, Switch} from 'react-router-dom';
 import {NotificationContainer} from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
 
+import {history} from './store';
 import {AddPage, QuestionsPage, SelectChoicePage} from './components/pages';
-// import QuestionPage from './components/pages/SelectChoice';
 import DrawerWrapper from './components/blocks/DrawerWrapper';
 
 import {ROUTES} from './constants';
-import {ReactElement} from 'react';
 
-interface IOwnProps extends RouteProps {
-  history: History;
-}
-
-type IRouterProps = IOwnProps;
-
-const AppRouter = ({history}: IRouterProps): ReactElement => {
+const AppRouter = () => {
   return (
     <ConnectedRouter history={history}>
       <DrawerWrapper>
@@ -39,5 +31,3 @@ const AppRouter = ({history}: IRouterProps): ReactElement => {
 };
 
 export default AppRouter;
-
-//          <Route exact path={`${ROUTES.QUESTION}/:id`} component={QuestionPage} />

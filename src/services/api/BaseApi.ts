@@ -79,7 +79,6 @@ export default class BaseApi {
     });
 
   public post = <T>(url: string, value?: T): Promise<ResponseTypes> =>
-  // public post = (url: string, value?: Record<string, string>): Promise<ResponseTypes> =>
     this.handleFetch({
       url,
       method: ApiMethod.POST,

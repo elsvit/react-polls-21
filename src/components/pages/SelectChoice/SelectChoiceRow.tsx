@@ -1,7 +1,6 @@
 import React, {ReactElement} from 'react';
 import Grid from '@material-ui/core/Grid';
 import Radio from '@material-ui/core/Radio';
-// import Hidden from '@material-ui/core/Hidden';
 
 import {IChoice} from '~/types/IQuestions';
 import './selectChoice.scss';
@@ -41,22 +40,3 @@ const SelectChoiceRow = ({row, totalVotes, selectedUrl, onClick}: ICountryRowPro
 };
 
 export default SelectChoiceRow;
-
-// <Grid item xs={12} sm={8} md={6}>
-//         {country.name}
-//       </Grid>
-//       <Hidden xsDown>
-//         <Grid item sm={4} md={2}>
-//           <div className="country-row-number">{country.density || ''}</div>
-//         </Grid>
-//       </Hidden>
-//       <Hidden smDown>
-//         <Grid item md={2}>
-//           <div className="country-row-number">{country.population || ''}</div>
-//         </Grid>
-//       </Hidden>
-//       <Hidden smDown>
-//         <Grid item md={2}>
-//           <div className="country-row-number">{country.area || ''}</div>
-//         </Grid>
-//       </Hidden>
