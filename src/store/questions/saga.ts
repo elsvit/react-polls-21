@@ -1,8 +1,9 @@
 import {put, takeEvery} from 'redux-saga/effects';
 
 import {api} from '~/store';
+import {handleError} from '~/services/utils';
 import {IQuestion} from '~/types/IQuestions';
-import {setLoaded, setLoading, setError} from '../common';
+import {setLoaded, setLoading} from '../common';
 import {
   setQuestionsAction,
   setQuestionAction,
@@ -13,7 +14,6 @@ import {
   IAddQuestionAction, addQuestionSuccessAction
 } from './questions';
 
-// Generator<PutEffect<ILoadingAction> | Promise<IQuestion[]> | PutEffect<ISetQuestionsAction> | PutEffect<ILoadedAction>, void, IQuestion[]>
 export function* sagaGetQuestions() {
   const actionType = QuestionsActions.GET_QUESTIONS;
 
@@ -28,7 +28,7 @@ export function* sagaGetQuestions() {
     const message = error.message || 'GET QUESTIONS ERROR';
 
     console.error(message);
-    setError({
+    handleError({
       actionType,
       message
     });
@@ -49,7 +49,7 @@ export function* sagaGetQuestion({payload}: IGetQuestionAction) {
     const message = error.message || 'GET QUESTION ERROR';
 
     console.error(message);
-    setError({
+    handleError({
       actionType,
       message
     });
@@ -70,7 +70,7 @@ export function* sagaAddQuestion({payload}: IAddQuestionAction) {
     const message = error.message || 'GET QUESTION ERROR';
 
     console.error(message);
-    setError({
+    handleError({
       actionType,
       message
     });
@@ -99,7 +99,7 @@ export function* sagaSaveAVote({payload}: ISaveVoteAction) {
     const message = error.message || 'SAVE VOTE ERROR';
 
     console.error(message);
-    setError({
+    handleError({
       actionType,
       message
     });

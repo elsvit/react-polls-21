@@ -17,3 +17,5 @@ interface IBoolDict {
 interface IObjectDict<T> {
   [key: string]: Maybe<T>
 }
+
+declare module 'react-notifications';

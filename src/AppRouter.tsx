@@ -6,6 +6,8 @@ import {ConnectedRouter} from 'connected-react-router';
 import {History} from 'history';
 import * as React from 'react';
 import {Redirect, Route, RouteProps, Switch} from 'react-router-dom';
+import {NotificationContainer} from 'react-notifications';
+import 'react-notifications/lib/notifications.css';
 
 import {AddPage, QuestionsPage, SelectChoicePage} from './components/pages';
 // import QuestionPage from './components/pages/SelectChoice';
@@ -31,6 +33,7 @@ const AppRouter = ({history}: IRouterProps): ReactElement => {
           <Redirect to={ROUTES.QUESTIONS} />
         </Switch>
       </DrawerWrapper>
+      <NotificationContainer/>
     </ConnectedRouter>
   );
 };
