@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// import {createHandlerBoundToURL} from 'workbox-precaching';
+// import {NavigationRoute, registerRoute} from 'workbox-routing';
 
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
@@ -18,6 +20,12 @@ ReactDOM.render(
 // Learn more about service workers: https://cra.link/PWA
 // serviceWorkerRegistration.unregister();
 serviceWorkerRegistration.register();
+
+// // This assumes /app-shell.html has been precached.
+// const handler = createHandlerBoundToURL('/app-shell.html');
+// const navigationRoute = new NavigationRoute(handler);
+//
+// registerRoute(navigationRoute);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
